@@ -1,0 +1,23 @@
+<div id="my-container" class="ui centered middle aligned grid">
+    <div id="my-row" class="row">
+        <div class="four wide column">
+            <h2>Screenshot a webpage from any device!</h2>
+
+            <form action="/" method="POST" class="ui form">
+                <div class="field">
+                    <label for="url">URL:</label><br>
+                    <input required type="text" id="url" name="url" placeholder="https://google.com/"><br>
+                </div>
+                <div class="field">
+                    <label for="device">Device:</label><br>
+                    <select required name="device" id="devices" >
+                    {{#each devices}}
+                        <option value="{{this.name}}">{{this.name}}</option>
+                    {{/each}}
+                    </select>
+                </div>
+                <input class="ui blue button" type="submit" value="Capture">
+            </form>
+        </div>
+    </div>
+</div>
